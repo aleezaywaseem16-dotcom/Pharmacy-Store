@@ -1,0 +1,15 @@
+process.env['NODE_ENV'] = 'test';
+process.env['DATABASE_URL'] = 'postgresql://test:test@localhost:5432/pharmacy_test';
+process.env['JWT_SECRET'] = 'test-jwt-secret-key-at-least-32-characters!!';
+process.env['JWT_EXPIRES_IN'] = '15m';
+process.env['REFRESH_TOKEN_EXPIRES_DAYS'] = '7';
+process.env['BCRYPT_ROUNDS'] = '4';
+process.env['FRONTEND_URL'] = 'http://localhost:3000';
+process.env['UPLOAD_DIR'] = 'uploads';
+process.env['MAX_FILE_SIZE_PRODUCT_MB'] = '5';
+process.env['MAX_FILE_SIZE_PRESCRIPTION_MB'] = '10';
+process.env['WEBHOOK_SECRET'] = 'test-webhook-secret';
+process.env['LOG_LEVEL'] = 'error';
+process.env['RATE_LIMIT_MAX'] = '10000';
+process.env['AUTH_RATE_LIMIT_MAX'] = '10000';
+process.env['UPLOAD_RATE_LIMIT_MAX'] = '10000';

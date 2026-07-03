@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+store/node_modules/
+admin/node_modules/
+
+# Build output
+dist/
+store/dist/
+admin/dist/
+
+# Environment files (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+backend.log
+
+# Uploads (user files, not for git)
+uploads/
+
+# Prisma generated
+node_modules/.prisma/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Test coverage
+coverage/
+
+# Temp
+*.tmp
+.claude/
+prisma/cleanup.ts
