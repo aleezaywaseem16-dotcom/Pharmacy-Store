@@ -8,7 +8,7 @@
     "dev:admin": "cd admin && npm run dev",
     "build": "tsc && tsc-alias",
     "start": "node dist/server.js",
-    "postinstall": "prisma generate && npm run build",
+    "postinstall": "prisma generate",
     "typecheck": "tsc --noEmit",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
