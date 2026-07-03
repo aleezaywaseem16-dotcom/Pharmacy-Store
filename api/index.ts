@@ -1,7 +1,10 @@
+// Must be FIRST — registers tsconfig @/ path aliases for require() at runtime
+// @vercel/node compiles TS but doesn't resolve aliases in the output JS
+import 'tsconfig-paths/register';
+
 import type { IncomingMessage, ServerResponse } from 'http';
 import type { Application } from 'express';
 
-// Catch any initialization error so the serverless function can report it
 let app: Application | null = null;
 let initError: string | null = null;
 
@@ -20,6 +23,5 @@ export default function handler(req: IncomingMessage, res: ServerResponse) {
     res.end(JSON.stringify({ error: 'Server init failed', detail: initError }));
     return;
   }
-  // Pass request to Express app
   (app as unknown as (req: IncomingMessage, res: ServerResponse) => void)(req, res);
 }
