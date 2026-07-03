@@ -1,8 +1,9 @@
 .env
 .env.local
 uploads/
-dist/
 node_modules/
 backend.log
 prisma/cleanup.ts
 .claude/
+set-vercel-env.ps1
+.env.vercel-check
