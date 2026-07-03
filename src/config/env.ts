@@ -64,9 +64,10 @@ const envSchema = z.object({
 const parsed = envSchema.safeParse(process.env);
 
 if (!parsed.success) {
-  console.error('❌ Environment validation failed:');
-  console.error(JSON.stringify(parsed.error.format(), null, 2));
-  process.exit(1);
+  const detail = JSON.stringify(parsed.error.format(), null, 2);
+  console.error('❌ Environment validation failed:\n' + detail);
+  // throw instead of process.exit so Vercel serverless can capture a proper error
+  throw new Error('Environment validation failed: ' + detail);
 }
 
 export const env = parsed.data;

@@ -1,0 +1,8 @@
+.env
+.env.local
+uploads/
+dist/
+node_modules/
+backend.log
+prisma/cleanup.ts
+.claude/
